@@ -1,0 +1,45 @@
+# TOOLS.md - 本地笔记
+
+Skills 定义工具_如何_工作。这个文件用于_你的_具体信息——也就是你配置里独有的内容。
+
+## 这里写什么
+
+例如：
+
+- 摄像头名称和位置
+- SSH 主机和别名
+- 偏好的 TTS 声音
+- 音箱/房间名称
+- 设备昵称
+- 任何与环境相关的内容
+
+## 示例
+
+```markdown
+### 摄像头
+
+- living-room → 主区域，180° 广角
+- front-door → 入口，运动触发
+
+### SSH
+
+- home-server → 192.168.1.100，用户：admin
+
+### TTS
+
+- 偏好声音："Nova"（温暖，略带英式口音）
+- 默认音箱：厨房 HomePod
+```
+
+## 🔐 WeChat Official Account (微信公众号)
+
+export WECHAT_APP_ID=wx97e912e779e8e36f
+export WECHAT_APP_SECRET=d8bb15b6ea2ddbc37354460dfbe666b5
+
+## 为什么要分开？
+
+Skills 是共享的。你的配置属于你自己。把它们分开意味着你可以在不丢失笔记的情况下更新 skills，也能在不泄露你的基础设施信息的情况下共享 skills.
+
+---
+
+添加任何能帮助你完成工作的内容。这是你的速查表.

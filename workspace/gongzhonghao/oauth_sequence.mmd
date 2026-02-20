@@ -1,0 +1,16 @@
+sequenceDiagram
+    participant Client as 客户端应用
+    participant ResourceOwner as 资源所有者(用户)
+    participant AuthorizationServer as 授权服务器
+    participant ResourceServer as 资源服务器
+    
+    ResourceOwner->>Client: 使用客户端应用
+    Client->>ResourceOwner: 重定向到授权页面
+    ResourceOwner->>AuthorizationServer: 登录并授权
+    AuthorizationServer->>ResourceOwner: 返回授权码
+    ResourceOwner->>Client: 传递授权码
+    Client->>AuthorizationServer: 请求访问令牌(含授权码)
+    AuthorizationServer->>Client: 验证并返回访问令牌
+    Client->>ResourceServer: 使用访问令牌请求资源
+    ResourceServer->>AuthorizationServer: 验证令牌(可选)
+    ResourceServer->>Client: 返回受保护资源

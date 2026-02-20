@@ -1,0 +1,20 @@
+sequenceDiagram
+    participant User as 用户/设备
+    participant PEP as 策略执行点(PEP)
+    participant PDP as 策略决策点(PDP)
+    participant IdP as 身份提供商(IdP)
+    participant Resource as 受保护资源
+    
+    User->>PEP: 请求访问资源
+    PEP->>PDP: 发送访问请求(用户身份, 设备状态, 资源信息)
+    PDP->>IdP: 验证用户身份
+    IdP-->>PDP: 返回身份验证结果
+    PDP->>PDP: 评估策略(最小权限, 设备合规性, 上下文风险)
+    alt 授权通过
+        PDP-->>PEP: 允许访问
+        PEP->>Resource: 转发请求
+        Resource-->>User: 返回资源
+    else 授权拒绝
+        PDP-->>PEP: 拒绝访问
+        PEP-->>User: 返回403错误
+    end

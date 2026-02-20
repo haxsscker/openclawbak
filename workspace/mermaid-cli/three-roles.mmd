@@ -1,0 +1,12 @@
+graph TB
+    U[👤 用户 User]
+    IDP[🔐 身份提供者 IDP<br>Identity Provider]
+    SP[🌐 服务提供者 SP<br>Service Provider]
+
+    U -. "需要访问资源" .-> SP
+    U -. "进行身份认证" .-> IDP
+    IDP -. "告诉SP该用户是否可信" .-> SP
+
+    style U fill:#E3F2FD,stroke:#1565C0,color:#000
+    style IDP fill:#FFF3E0,stroke:#E65100,color:#000
+    style SP fill:#E8F5E9,stroke:#2E7D32,color:#000

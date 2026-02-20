@@ -1,0 +1,14 @@
+graph TB
+    SSO["🔑 单点登录 SSO"]
+    SAML["📄 SAML 安全断言标记语言"]
+    TRUST["🤝 信任建立"]
+    FLOW["⚡ 认证流程"]
+    
+    SSO --> SAML
+    SAML --> TRUST
+    TRUST --> FLOW
+    
+    style SSO fill:#E3F2FD,stroke:#1565C0
+    style SAML fill:#FFF3E0,stroke:#E65100
+    style TRUST fill:#F3E5F5,stroke:#7B1FA2
+    style FLOW fill:#E8F5E9,stroke:#2E7D32

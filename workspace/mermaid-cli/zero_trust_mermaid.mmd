@@ -1,0 +1,25 @@
+```mermaid
+sequenceDiagram
+    participant User as 用户/设备
+    participant PEP as 策略执行点(PEP)
+    participant PDP as 策略决策点(PDP)
+    participant PA as 策略管理员(PA)
+    participant DS as 数据存储
+    
+    User->>PEP: 请求访问资源
+    PEP->>PDP: 发送访问请求(含用户身份、设备状态、上下文)
+    PDP->>DS: 查询策略规则
+    DS-->>PDP: 返回策略规则
+    PDP->>PA: 验证策略配置
+    PA-->>PDP: 确认策略有效性
+    PDP->>PDP: 评估风险(身份验证、设备合规性、行为分析)
+    alt 风险评估通过
+        PDP-->>PEP: 授权决定(允许)
+        PEP->>User: 允许访问资源
+    else 风险评估失败
+        PDP-->>PEP: 授权决定(拒绝)
+        PEP->>User: 拒绝访问
+    end
+    
+    Note over User,PDP: 零信任原则: 永不信任,始终验证
+```

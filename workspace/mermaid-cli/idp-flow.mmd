@@ -1,0 +1,17 @@
+sequenceDiagram
+    participant U as 用户
+    participant IDP as IDP 身份提供者
+    participant SP as SP 服务提供者
+
+    U->>IDP: ① 用户请求访问 IDP
+    IDP->>U: ② IDP 要求用户进行认证
+    U->>IDP: ③ 用户提交认证凭据（用户名/密码）
+    
+    Note over IDP: ④ 验证凭据 如果无效则拒绝
+
+    IDP->>IDP: ⑤ 生成 SAML 断言
+    IDP->>SP: ⑥ 将 SAML 断言发送给 SP
+    
+    Note over SP: ⑦ 验证 SAML 断言 是否合法有效
+
+    SP->>U: ⑧ 会话建立，用户获得访问权限

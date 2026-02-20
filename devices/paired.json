@@ -1,0 +1,65 @@
+{
+  "f9e4e9ccab30577a8051172551eb638d0b22a948e2f4358e049038670219cacd": {
+    "deviceId": "f9e4e9ccab30577a8051172551eb638d0b22a948e2f4358e049038670219cacd",
+    "publicKey": "19QOkLw78RcxRkZ4ci7e3tDaiuVnicFzZBXlLlm8h4M",
+    "platform": "linux",
+    "clientId": "gateway-client",
+    "clientMode": "backend",
+    "role": "operator",
+    "roles": [
+      "operator"
+    ],
+    "scopes": [
+      "operator.admin",
+      "operator.approvals",
+      "operator.pairing"
+    ],
+    "tokens": {
+      "operator": {
+        "token": "a3ce092b769b4365af83776d1070b676",
+        "role": "operator",
+        "scopes": [
+          "operator.admin",
+          "operator.approvals",
+          "operator.pairing"
+        ],
+        "createdAtMs": 1771343414985,
+        "lastUsedAtMs": 1771551570840
+      }
+    },
+    "createdAtMs": 1771343414985,
+    "approvedAtMs": 1771343414985,
+    "displayName": "agent"
+  },
+  "0af41bc5056bc49835eff71ed7e03440f25c318053d73dedeb471136fedd6c27": {
+    "deviceId": "0af41bc5056bc49835eff71ed7e03440f25c318053d73dedeb471136fedd6c27",
+    "publicKey": "RmNIf3zsUVJkqdWiVFMINsPeknwlHVklyAO-ovyrDMI",
+    "platform": "MacIntel",
+    "clientId": "openclaw-control-ui",
+    "clientMode": "webchat",
+    "role": "operator",
+    "roles": [
+      "operator"
+    ],
+    "scopes": [
+      "operator.admin",
+      "operator.approvals",
+      "operator.pairing"
+    ],
+    "tokens": {
+      "operator": {
+        "token": "bf73d9cf339042efa6dee8d599e5379d",
+        "role": "operator",
+        "scopes": [
+          "operator.admin",
+          "operator.approvals",
+          "operator.pairing"
+        ],
+        "createdAtMs": 1771344158293,
+        "lastUsedAtMs": 1771550292721
+      }
+    },
+    "createdAtMs": 1771344158293,
+    "approvedAtMs": 1771344158293
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.2.3-1",
+    "lastTouchedAt": "2026-02-20T01:18:11.188Z"
+  },
+  "wizard": {
+    "lastRunAt": "2026-02-20T01:18:11.168Z",
+    "lastRunVersion": "2026.2.3-1",
+    "lastRunCommand": "configure",
+    "lastRunMode": "local"
+  },
+  "browser": {
+    "enabled": true,
+    "headless": true,
+    "noSandbox": true,
+    "defaultProfile": "clawd",
+    "profiles": {
+      "clawd": {
+        "cdpPort": 18800,
+        "color": "#FF4500"
+      }
+    }
+  },
+  "models": {
+    "mode": "merge",
+    "providers": {
+      "dashscope": {
+        "baseUrl": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+        "apiKey": "sk-6354e30be5da40dba7381558060736ca",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "qwen3-max-2026-01-23",
+            "name": "Qwen3 Max Thinking",
+            "reasoning": true,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 262144,
+            "maxTokens": 32768,
+            "compat": {
+              "supportsDeveloperRole": false,
+              "supportsReasoningEffort": false
+            }
+          },
+          {
+            "id": "qwen3-coder-plus",
+            "name": "Qwen3 Coder Plus",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 1000000,
+            "maxTokens": 65536
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "dashscope/qwen3-max-2026-01-23"
+      },
+      "workspace": "/root/.openclaw/workspace",
+      "maxConcurrent": 4,
+      "subagents": {
+        "maxConcurrent": 8
+      }
+    }
+  },
+  "tools": {
+    "web": {
+      "search": {
+        "enabled": false
+      },
+      "fetch": {
+        "enabled": false
+      }
+    }
+  },
+  "messages": {
+    "ackReactionScope": "group-mentions"
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto"
+  },
+  "channels": {
+    "clawdbot-dingtalk": {
+      "enabled": true,
+      "clientId": "dingacvp3iblcxwzzgbi",
+      "clientSecret": "g_w3jW3UtIGXSFklC-3k82bMOVkNZrSYe5Vxtbs-DYMybYpK6DFuVEK93edswKQz",
+      "replyMode": "markdown",
+      "aliyunMcp": {
+        "timeoutSeconds": 60,
+        "tools": {
+          "webSearch": {
+            "enabled": true
+          },
+          "codeInterpreter": {
+            "enabled": true
+          },
+          "webParser": {
+            "enabled": true
+          },
+          "wan26Media": {
+            "enabled": true,
+            "autoSendToDingtalk": true
+          }
+        },
+        "apiKey": "sk-6354e30be5da40dba7381558060736ca"
+      }
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "lan",
+    "auth": {
+      "mode": "token",
+      "token": "8b0af1b2eacf17500c72491e438fbd8e5701491557a081bb005e37a1412b0611"
+    },
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    },
+    "http": {
+      "endpoints": {
+        "chatCompletions": {
+          "enabled": true
+        }
+      }
+    }
+  },
+  "skills": {
+    "install": {
+      "nodeManager": "npm"
+    }
+  },
+  "plugins": {
+    "load": {
+      "paths": [
+        "/usr/lib/node_modules/clawdbot-dingtalk"
+      ]
+    },
+    "entries": {
+      "clawdbot-dingtalk": {
+        "enabled": true
+      }
+    }
+  }
+}

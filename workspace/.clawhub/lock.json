@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "skills": {
+    "dianping-query": {
+      "version": "1.0.0",
+      "installedAt": 1771392631692
+    },
+    "xiaohongshu-mcp": {
+      "version": "1.0.0",
+      "installedAt": 1771393100161
+    },
+    "xiaohongshu-publish": {
+      "version": "1.0.0",
+      "installedAt": 1771396680920
+    },
+    "xiaohongshu-publisher": {
+      "version": "1.0.0",
+      "installedAt": 1771398561546
+    },
+    "wechat-publisher": {
+      "version": "0.1.0",
+      "installedAt": 1771417060769
+    }
+  }
+}

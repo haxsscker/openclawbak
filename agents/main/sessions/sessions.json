@@ -1,0 +1,1427 @@
+{
+  "agent:main:dingtalk:group:cidpyy80w+8j9ksva3s1yl2lg==": {
+    "sessionId": "e013b41a-0333-499f-b68d-6fa097f696b8",
+    "updatedAt": 1771471105707,
+    "systemSent": true,
+    "abortedLastRun": false,
+    "displayName": "clawdbot-dingtalk:g-manager8541",
+    "chatType": "group",
+    "channel": "clawdbot-dingtalk",
+    "groupId": "manager8541",
+    "deliveryContext": {
+      "channel": "clawdbot-dingtalk",
+      "to": "cidpYY80W+8J9KSVa3s1Yl2Lg==",
+      "accountId": "default"
+    },
+    "lastChannel": "clawdbot-dingtalk",
+    "lastTo": "cidpYY80W+8J9KSVa3s1Yl2Lg==",
+    "lastAccountId": "default",
+    "origin": {
+      "label": "manager8541",
+      "provider": "clawdbot-dingtalk",
+      "surface": "clawdbot-dingtalk",
+      "chatType": "group",
+      "from": "manager8541",
+      "to": "cidpYY80W+8J9KSVa3s1Yl2Lg==",
+      "accountId": "default"
+    },
+    "sessionFile": "/root/.openclaw/agents/main/sessions/e013b41a-0333-499f-b68d-6fa097f696b8.jsonl",
+    "compactionCount": 0,
+    "skillsSnapshot": {
+      "prompt": "\n\nThe following skills provide specialized instructions for specific tasks.\nUse the read tool to load a skill's file when the task matches its description.\nWhen a skill file references a relative path, resolve it against the skill directory (parent of SKILL.md / dirname of the path) and use that absolute path in tool commands.\n\n<available_skills>\n  <skill>\n    <name>dingtalk-cron-job</name>\n    <description>钉钉渠道专用定时提醒技能。触发场景：用户提到任何时间点提醒、某时间做某事、循环提醒（如&apos;每隔X分钟提醒我&apos;、&apos;下午3点提醒我&apos;、&apos;10分钟后叫我&apos;）时，必须使用 cron job。</description>\n    <location>/usr/lib/node_modules/clawdbot-dingtalk/skills/dingtalk-cron-job/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>dingtalk-send-media</name>\n    <description>Use when chatting via DingTalk and the user asks to “发送/发给我/给我” an image/file/attachment (PDF/Word/Excel/etc), or when needing to output [DING:IMAGE]/[DING:FILE] tags to send local files.</description>\n    <location>/usr/lib/node_modules/clawdbot-dingtalk/skills/dingtalk-send-media/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>openclaw-browser-quality</name>\n    <description>Quality-first OpenClaw browser automation and screenshot capture. Use when a task involves the OpenClaw `browser` tool or CLI browser commands, especially when visual fidelity, clear screenshots, stable refs, or reliable tab control matters (snapshots, screenshots, navigation, actions, debugging).</description>\n    <location>/usr/lib/node_modules/clawdbot-dingtalk/skills/openclaw-browser-quality/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>healthcheck</name>\n    <description>Host security hardening and risk-tolerance configuration for OpenClaw deployments. Use when a user asks for security audits, firewall/SSH/update hardening, risk posture, exposure review, OpenClaw cron scheduling for periodic checks, or version status checks on a machine running OpenClaw (laptop, workstation, Pi, VPS).</description>\n    <location>/usr/lib/node_modules/openclaw/skills/healthcheck/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>skill-creator</name>\n    <description>Create or update AgentSkills. Use when designing, structuring, or packaging skills with scripts, references, and assets.</description>\n    <location>/usr/lib/node_modules/openclaw/skills/skill-creator/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>weather</name>\n    <description>Get current weather and forecasts (no API key required).</description>\n    <location>/usr/lib/node_modules/openclaw/skills/weather/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>dianping-query</name>\n    <description>查询大众点评餐厅信息。使用场景：(1) 用户要查询某家餐厅的评分、人均消费、地址 (2) 用户要搜索特定菜系或区域的餐厅推荐 (3) 用户要获取附近美食推荐。登录账号：一定S。重要：搜索时URL需包含城市ID（如hangzhou页面），账号定位北京时需使用URL参数方式绕过。</description>\n    <location>/root/.openclaw/workspace/skills/dianping-query/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>wechat-publisher</name>\n    <description>一键发布 Markdown 到微信公众号草稿箱。基于 wenyan-cli，支持多主题、代码高亮、图片自动上传。</description>\n    <location>/root/.openclaw/workspace/skills/wechat-publisher/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>xiaohongshu-publish</name>\n    <description>小红书长文发布。用于在网页版小红书创作服务平台发布长文笔记。当用户说&quot;发小红书&quot;、&quot;发小红书长文&quot;、&quot;写一篇小红书&quot;时使用此技能。</description>\n    <location>/root/.openclaw/workspace/skills/xiaohongshu-publish/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>xiaohongshu-publisher</name>\n    <description>Draft and publish posts to 小红书 (Xiaohongshu/RED). Use when creating content for 小红书, drafting posts, generating cover images, or publishing via browser automation. Covers the full workflow from content creation to browser-based publishing, including cover image generation with Pillow.</description>\n    <location>/root/.openclaw/workspace/skills/xiaohongshu-publisher/SKILL.md</location>\n  </skill>\n</available_skills>",
+      "skills": [
+        {
+          "name": "dingtalk-cron-job"
+        },
+        {
+          "name": "dingtalk-send-media"
+        },
+        {
+          "name": "openclaw-browser-quality"
+        },
+        {
+          "name": "healthcheck"
+        },
+        {
+          "name": "skill-creator"
+        },
+        {
+          "name": "weather"
+        },
+        {
+          "name": "dianping-query"
+        },
+        {
+          "name": "wechat-publisher"
+        },
+        {
+          "name": "xiaohongshu-publish"
+        },
+        {
+          "name": "xiaohongshu-publisher"
+        }
+      ],
+      "resolvedSkills": [
+        {
+          "name": "dingtalk-cron-job",
+          "description": "钉钉渠道专用定时提醒技能。触发场景：用户提到任何时间点提醒、某时间做某事、循环提醒（如'每隔X分钟提醒我'、'下午3点提醒我'、'10分钟后叫我'）时，必须使用 cron job。",
+          "filePath": "/usr/lib/node_modules/clawdbot-dingtalk/skills/dingtalk-cron-job/SKILL.md",
+          "baseDir": "/usr/lib/node_modules/clawdbot-dingtalk/skills/dingtalk-cron-job",
+          "source": "openclaw-extra",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "dingtalk-send-media",
+          "description": "Use when chatting via DingTalk and the user asks to “发送/发给我/给我” an image/file/attachment (PDF/Word/Excel/etc), or when needing to output [DING:IMAGE]/[DING:FILE] tags to send local files.",
+          "filePath": "/usr/lib/node_modules/clawdbot-dingtalk/skills/dingtalk-send-media/SKILL.md",
+          "baseDir": "/usr/lib/node_modules/clawdbot-dingtalk/skills/dingtalk-send-media",
+          "source": "openclaw-extra",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "openclaw-browser-quality",
+          "description": "Quality-first OpenClaw browser automation and screenshot capture. Use when a task involves the OpenClaw `browser` tool or CLI browser commands, especially when visual fidelity, clear screenshots, stable refs, or reliable tab control matters (snapshots, screenshots, navigation, actions, debugging).",
+          "filePath": "/usr/lib/node_modules/clawdbot-dingtalk/skills/openclaw-browser-quality/SKILL.md",
+          "baseDir": "/usr/lib/node_modules/clawdbot-dingtalk/skills/openclaw-browser-quality",
+          "source": "openclaw-extra",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "healthcheck",
+          "description": "Host security hardening and risk-tolerance configuration for OpenClaw deployments. Use when a user asks for security audits, firewall/SSH/update hardening, risk posture, exposure review, OpenClaw cron scheduling for periodic checks, or version status checks on a machine running OpenClaw (laptop, workstation, Pi, VPS).",
+          "filePath": "/usr/lib/node_modules/openclaw/skills/healthcheck/SKILL.md",
+          "baseDir": "/usr/lib/node_modules/openclaw/skills/healthcheck",
+          "source": "openclaw-bundled",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "skill-creator",
+          "description": "Create or update AgentSkills. Use when designing, structuring, or packaging skills with scripts, references, and assets.",
+          "filePath": "/usr/lib/node_modules/openclaw/skills/skill-creator/SKILL.md",
+          "baseDir": "/usr/lib/node_modules/openclaw/skills/skill-creator",
+          "source": "openclaw-bundled",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "weather",
+          "description": "Get current weather and forecasts (no API key required).",
+          "filePath": "/usr/lib/node_modules/openclaw/skills/weather/SKILL.md",
+          "baseDir": "/usr/lib/node_modules/openclaw/skills/weather",
+          "source": "openclaw-bundled",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "dianping-query",
+          "description": "查询大众点评餐厅信息。使用场景：(1) 用户要查询某家餐厅的评分、人均消费、地址 (2) 用户要搜索特定菜系或区域的餐厅推荐 (3) 用户要获取附近美食推荐。登录账号：一定S。重要：搜索时URL需包含城市ID（如hangzhou页面），账号定位北京时需使用URL参数方式绕过。",
+          "filePath": "/root/.openclaw/workspace/skills/dianping-query/SKILL.md",
+          "baseDir": "/root/.openclaw/workspace/skills/dianping-query",
+          "source": "openclaw-workspace",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "wechat-publisher",
+          "description": "一键发布 Markdown 到微信公众号草稿箱。基于 wenyan-cli，支持多主题、代码高亮、图片自动上传。",
+          "filePath": "/root/.openclaw/workspace/skills/wechat-publisher/SKILL.md",
+          "baseDir": "/root/.openclaw/workspace/skills/wechat-publisher",
+          "source": "openclaw-workspace",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "xiaohongshu-publish",
+          "description": "小红书长文发布。用于在网页版小红书创作服务平台发布长文笔记。当用户说\"发小红书\"、\"发小红书长文\"、\"写一篇小红书\"时使用此技能。",
+          "filePath": "/root/.openclaw/workspace/skills/xiaohongshu-publish/SKILL.md",
+          "baseDir": "/root/.openclaw/workspace/skills/xiaohongshu-publish",
+          "source": "openclaw-workspace",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "xiaohongshu-publisher",
+          "description": "Draft and publish posts to 小红书 (Xiaohongshu/RED). Use when creating content for 小红书, drafting posts, generating cover images, or publishing via browser automation. Covers the full workflow from content creation to browser-based publishing, including cover image generation with Pillow.",
+          "filePath": "/root/.openclaw/workspace/skills/xiaohongshu-publisher/SKILL.md",
+          "baseDir": "/root/.openclaw/workspace/skills/xiaohongshu-publisher",
+          "source": "openclaw-workspace",
+          "disableModelInvocation": false
+        }
+      ],
+      "version": 0
+    },
+    "inputTokens": 27057,
+    "outputTokens": 26,
+    "totalTokens": 27057,
+    "modelProvider": "dashscope",
+    "model": "qwen3-max-2026-01-23",
+    "contextTokens": 262144,
+    "systemPromptReport": {
+      "source": "run",
+      "generatedAt": 1771471103355,
+      "sessionId": "e013b41a-0333-499f-b68d-6fa097f696b8",
+      "sessionKey": "agent:main:dingtalk:group:cidpyy80w+8j9ksva3s1yl2lg==",
+      "provider": "dashscope",
+      "model": "qwen3-max-2026-01-23",
+      "workspaceDir": "/root/.openclaw/workspace",
+      "bootstrapMaxChars": 20000,
+      "sandbox": {
+        "mode": "off",
+        "sandboxed": false
+      },
+      "systemPrompt": {
+        "chars": 21758,
+        "projectContextChars": 6616,
+        "nonProjectContextChars": 15142
+      },
+      "injectedWorkspaceFiles": [
+        {
+          "name": "AGENTS.md",
+          "path": "/root/.openclaw/workspace/AGENTS.md",
+          "missing": false,
+          "rawChars": 3663,
+          "injectedChars": 3663,
+          "truncated": false
+        },
+        {
+          "name": "SOUL.md",
+          "path": "/root/.openclaw/workspace/SOUL.md",
+          "missing": false,
+          "rawChars": 685,
+          "injectedChars": 685,
+          "truncated": false
+        },
+        {
+          "name": "TOOLS.md",
+          "path": "/root/.openclaw/workspace/TOOLS.md",
+          "missing": false,
+          "rawChars": 598,
+          "injectedChars": 598,
+          "truncated": false
+        },
+        {
+          "name": "IDENTITY.md",
+          "path": "/root/.openclaw/workspace/IDENTITY.md",
+          "missing": false,
+          "rawChars": 344,
+          "injectedChars": 344,
+          "truncated": false
+        },
+        {
+          "name": "USER.md",
+          "path": "/root/.openclaw/workspace/USER.md",
+          "missing": false,
+          "rawChars": 215,
+          "injectedChars": 215,
+          "truncated": false
+        },
+        {
+          "name": "HEARTBEAT.md",
+          "path": "/root/.openclaw/workspace/HEARTBEAT.md",
+          "missing": false,
+          "rawChars": 89,
+          "injectedChars": 89,
+          "truncated": false
+        },
+        {
+          "name": "BOOTSTRAP.md",
+          "path": "/root/.openclaw/workspace/BOOTSTRAP.md",
+          "missing": false,
+          "rawChars": 698,
+          "injectedChars": 698,
+          "truncated": false
+        }
+      ],
+      "skills": {
+        "promptChars": 3809,
+        "entries": [
+          {
+            "name": "dingtalk-cron-job",
+            "blockChars": 304
+          },
+          {
+            "name": "dingtalk-send-media",
+            "blockChars": 375
+          },
+          {
+            "name": "openclaw-browser-quality",
+            "blockChars": 496
+          },
+          {
+            "name": "healthcheck",
+            "blockChars": 482
+          },
+          {
+            "name": "skill-creator",
+            "blockChars": 287
+          },
+          {
+            "name": "weather",
+            "blockChars": 211
+          },
+          {
+            "name": "dianping-query",
+            "blockChars": 302
+          },
+          {
+            "name": "wechat-publisher",
+            "blockChars": 224
+          },
+          {
+            "name": "xiaohongshu-publish",
+            "blockChars": 269
+          },
+          {
+            "name": "xiaohongshu-publisher",
+            "blockChars": 463
+          }
+        ]
+      },
+      "tools": {
+        "listChars": 5016,
+        "schemaChars": 15069,
+        "entries": [
+          {
+            "name": "read",
+            "summaryChars": 298,
+            "schemaChars": 392,
+            "propertiesCount": 4
+          },
+          {
+            "name": "edit",
+            "summaryChars": 129,
+            "schemaChars": 591,
+            "propertiesCount": 6
+          },
+          {
+            "name": "write",
+            "summaryChars": 127,
+            "schemaChars": 313,
+            "propertiesCount": 3
+          },
+          {
+            "name": "exec",
+            "summaryChars": 181,
+            "schemaChars": 1037,
+            "propertiesCount": 12
+          },
+          {
+            "name": "process",
+            "summaryChars": 85,
+            "schemaChars": 844,
+            "propertiesCount": 11
+          },
+          {
+            "name": "browser",
+            "summaryChars": 1251,
+            "schemaChars": 1869,
+            "propertiesCount": 28
+          },
+          {
+            "name": "canvas",
+            "summaryChars": 106,
+            "schemaChars": 661,
+            "propertiesCount": 18
+          },
+          {
+            "name": "nodes",
+            "summaryChars": 101,
+            "schemaChars": 1479,
+            "propertiesCount": 33
+          },
+          {
+            "name": "cron",
+            "summaryChars": 2444,
+            "schemaChars": 530,
+            "propertiesCount": 12
+          },
+          {
+            "name": "message",
+            "summaryChars": 89,
+            "schemaChars": 3897,
+            "propertiesCount": 84
+          },
+          {
+            "name": "tts",
+            "summaryChars": 129,
+            "schemaChars": 223,
+            "propertiesCount": 2
+          },
+          {
+            "name": "gateway",
+            "summaryChars": 225,
+            "schemaChars": 465,
+            "propertiesCount": 11
+          },
+          {
+            "name": "agents_list",
+            "summaryChars": 72,
+            "schemaChars": 33,
+            "propertiesCount": 0
+          },
+          {
+            "name": "sessions_list",
+            "summaryChars": 54,
+            "schemaChars": 176,
+            "propertiesCount": 4
+          },
+          {
+            "name": "sessions_history",
+            "summaryChars": 36,
+            "schemaChars": 149,
+            "propertiesCount": 3
+          },
+          {
+            "name": "sessions_send",
+            "summaryChars": 84,
+            "schemaChars": 203,
+            "propertiesCount": 5
+          },
+          {
+            "name": "sessions_spawn",
+            "summaryChars": 107,
+            "schemaChars": 312,
+            "propertiesCount": 8
+          },
+          {
+            "name": "session_status",
+            "summaryChars": 207,
+            "schemaChars": 89,
+            "propertiesCount": 2
+          },
+          {
+            "name": "web_search",
+            "summaryChars": 807,
+            "schemaChars": 572,
+            "propertiesCount": 6
+          },
+          {
+            "name": "aliyun_code_interpreter",
+            "summaryChars": 823,
+            "schemaChars": 137,
+            "propertiesCount": 1
+          },
+          {
+            "name": "aliyun_web_parser",
+            "summaryChars": 871,
+            "schemaChars": 137,
+            "propertiesCount": 1
+          },
+          {
+            "name": "aliyun_wan26_media",
+            "summaryChars": 1382,
+            "schemaChars": 693,
+            "propertiesCount": 6
+          },
+          {
+            "name": "memory_search",
+            "summaryChars": 235,
+            "schemaChars": 139,
+            "propertiesCount": 3
+          },
+          {
+            "name": "memory_get",
+            "summaryChars": 151,
+            "schemaChars": 128,
+            "propertiesCount": 3
+          }
+        ]
+      }
+    }
+  },
+  "agent:main:clawdbot-dingtalk:group:manager8541": {
+    "chatType": "group",
+    "channel": "clawdbot-dingtalk",
+    "groupId": "manager8541",
+    "displayName": "clawdbot-dingtalk:g-manager8541",
+    "origin": {
+      "label": "clawdbot-dingtalk:group:manager8541",
+      "provider": "clawdbot-dingtalk",
+      "surface": "clawdbot-dingtalk",
+      "chatType": "group",
+      "from": "clawdbot-dingtalk:group:manager8541",
+      "to": "channel:manager8541",
+      "accountId": "default"
+    },
+    "sessionId": "775d1f9c-26b9-4306-89ab-fe5d29c7044b",
+    "updatedAt": 1771467183866,
+    "deliveryContext": {
+      "channel": "clawdbot-dingtalk"
+    },
+    "lastChannel": "clawdbot-dingtalk",
+    "sessionFile": "/root/.openclaw/agents/main/sessions/775d1f9c-26b9-4306-89ab-fe5d29c7044b.jsonl"
+  },
+  "agent:main:main": {
+    "sessionId": "d69c20c7-6c5c-40ec-9cd8-c5ddee956ff2",
+    "updatedAt": 1771549878867,
+    "systemSent": true,
+    "abortedLastRun": false,
+    "chatType": "direct",
+    "deliveryContext": {
+      "channel": "webchat"
+    },
+    "lastChannel": "webchat",
+    "origin": {
+      "label": "openclaw-tui",
+      "provider": "webchat",
+      "surface": "webchat",
+      "chatType": "direct"
+    },
+    "sessionFile": "/root/.openclaw/agents/main/sessions/d69c20c7-6c5c-40ec-9cd8-c5ddee956ff2.jsonl",
+    "compactionCount": 0,
+    "skillsSnapshot": {
+      "prompt": "\n\nThe following skills provide specialized instructions for specific tasks.\nUse the read tool to load a skill's file when the task matches its description.\nWhen a skill file references a relative path, resolve it against the skill directory (parent of SKILL.md / dirname of the path) and use that absolute path in tool commands.\n\n<available_skills>\n  <skill>\n    <name>dingtalk-cron-job</name>\n    <description>钉钉渠道专用定时提醒技能。触发场景：用户提到任何时间点提醒、某时间做某事、循环提醒（如&apos;每隔X分钟提醒我&apos;、&apos;下午3点提醒我&apos;、&apos;10分钟后叫我&apos;）时，必须使用 cron job。</description>\n    <location>/usr/lib/node_modules/clawdbot-dingtalk/skills/dingtalk-cron-job/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>dingtalk-send-media</name>\n    <description>Use when chatting via DingTalk and the user asks to “发送/发给我/给我” an image/file/attachment (PDF/Word/Excel/etc), or when needing to output [DING:IMAGE]/[DING:FILE] tags to send local files.</description>\n    <location>/usr/lib/node_modules/clawdbot-dingtalk/skills/dingtalk-send-media/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>openclaw-browser-quality</name>\n    <description>Quality-first OpenClaw browser automation and screenshot capture. Use when a task involves the OpenClaw `browser` tool or CLI browser commands, especially when visual fidelity, clear screenshots, stable refs, or reliable tab control matters (snapshots, screenshots, navigation, actions, debugging).</description>\n    <location>/usr/lib/node_modules/clawdbot-dingtalk/skills/openclaw-browser-quality/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>clawhub</name>\n    <description>Use the ClawHub CLI to search, install, update, and publish agent skills from clawhub.com. Use when you need to fetch new skills on the fly, sync installed skills to latest or a specific version, or publish new/updated skill folders with the npm-installed clawhub CLI.</description>\n    <location>/usr/lib/node_modules/openclaw/skills/clawhub/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>healthcheck</name>\n    <description>Host security hardening and risk-tolerance configuration for OpenClaw deployments. Use when a user asks for security audits, firewall/SSH/update hardening, risk posture, exposure review, OpenClaw cron scheduling for periodic checks, or version status checks on a machine running OpenClaw (laptop, workstation, Pi, VPS).</description>\n    <location>/usr/lib/node_modules/openclaw/skills/healthcheck/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>skill-creator</name>\n    <description>Create or update AgentSkills. Use when designing, structuring, or packaging skills with scripts, references, and assets.</description>\n    <location>/usr/lib/node_modules/openclaw/skills/skill-creator/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>weather</name>\n    <description>Get current weather and forecasts (no API key required).</description>\n    <location>/usr/lib/node_modules/openclaw/skills/weather/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>dianping-query</name>\n    <description>查询大众点评餐厅信息。使用场景：(1) 用户要查询某家餐厅的评分、人均消费、地址 (2) 用户要搜索特定菜系或区域的餐厅推荐 (3) 用户要获取附近美食推荐。登录账号：一定S。重要：搜索时URL需包含城市ID（如hangzhou页面），账号定位北京时需使用URL参数方式绕过。</description>\n    <location>/root/.openclaw/workspace/skills/dianping-query/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>wechat-publisher</name>\n    <description>一键发布 Markdown 到微信公众号草稿箱。基于 wenyan-cli，支持多主题、代码高亮、图片自动上传。</description>\n    <location>/root/.openclaw/workspace/skills/wechat-publisher/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>xiaohongshu-publish</name>\n    <description>小红书长文发布。用于在网页版小红书创作服务平台发布长文笔记。当用户说&quot;发小红书&quot;、&quot;发小红书长文&quot;、&quot;写一篇小红书&quot;时使用此技能。</description>\n    <location>/root/.openclaw/workspace/skills/xiaohongshu-publish/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>xiaohongshu-publisher</name>\n    <description>Draft and publish posts to 小红书 (Xiaohongshu/RED). Use when creating content for 小红书, drafting posts, generating cover images, or publishing via browser automation. Covers the full workflow from content creation to browser-based publishing, including cover image generation with Pillow.</description>\n    <location>/root/.openclaw/workspace/skills/xiaohongshu-publisher/SKILL.md</location>\n  </skill>\n</available_skills>",
+      "skills": [
+        {
+          "name": "dingtalk-cron-job"
+        },
+        {
+          "name": "dingtalk-send-media"
+        },
+        {
+          "name": "openclaw-browser-quality"
+        },
+        {
+          "name": "clawhub"
+        },
+        {
+          "name": "healthcheck"
+        },
+        {
+          "name": "skill-creator"
+        },
+        {
+          "name": "weather"
+        },
+        {
+          "name": "dianping-query"
+        },
+        {
+          "name": "wechat-publisher"
+        },
+        {
+          "name": "xiaohongshu-publish"
+        },
+        {
+          "name": "xiaohongshu-publisher"
+        }
+      ],
+      "resolvedSkills": [
+        {
+          "name": "dingtalk-cron-job",
+          "description": "钉钉渠道专用定时提醒技能。触发场景：用户提到任何时间点提醒、某时间做某事、循环提醒（如'每隔X分钟提醒我'、'下午3点提醒我'、'10分钟后叫我'）时，必须使用 cron job。",
+          "filePath": "/usr/lib/node_modules/clawdbot-dingtalk/skills/dingtalk-cron-job/SKILL.md",
+          "baseDir": "/usr/lib/node_modules/clawdbot-dingtalk/skills/dingtalk-cron-job",
+          "source": "openclaw-extra",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "dingtalk-send-media",
+          "description": "Use when chatting via DingTalk and the user asks to “发送/发给我/给我” an image/file/attachment (PDF/Word/Excel/etc), or when needing to output [DING:IMAGE]/[DING:FILE] tags to send local files.",
+          "filePath": "/usr/lib/node_modules/clawdbot-dingtalk/skills/dingtalk-send-media/SKILL.md",
+          "baseDir": "/usr/lib/node_modules/clawdbot-dingtalk/skills/dingtalk-send-media",
+          "source": "openclaw-extra",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "openclaw-browser-quality",
+          "description": "Quality-first OpenClaw browser automation and screenshot capture. Use when a task involves the OpenClaw `browser` tool or CLI browser commands, especially when visual fidelity, clear screenshots, stable refs, or reliable tab control matters (snapshots, screenshots, navigation, actions, debugging).",
+          "filePath": "/usr/lib/node_modules/clawdbot-dingtalk/skills/openclaw-browser-quality/SKILL.md",
+          "baseDir": "/usr/lib/node_modules/clawdbot-dingtalk/skills/openclaw-browser-quality",
+          "source": "openclaw-extra",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "clawhub",
+          "description": "Use the ClawHub CLI to search, install, update, and publish agent skills from clawhub.com. Use when you need to fetch new skills on the fly, sync installed skills to latest or a specific version, or publish new/updated skill folders with the npm-installed clawhub CLI.",
+          "filePath": "/usr/lib/node_modules/openclaw/skills/clawhub/SKILL.md",
+          "baseDir": "/usr/lib/node_modules/openclaw/skills/clawhub",
+          "source": "openclaw-bundled",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "healthcheck",
+          "description": "Host security hardening and risk-tolerance configuration for OpenClaw deployments. Use when a user asks for security audits, firewall/SSH/update hardening, risk posture, exposure review, OpenClaw cron scheduling for periodic checks, or version status checks on a machine running OpenClaw (laptop, workstation, Pi, VPS).",
+          "filePath": "/usr/lib/node_modules/openclaw/skills/healthcheck/SKILL.md",
+          "baseDir": "/usr/lib/node_modules/openclaw/skills/healthcheck",
+          "source": "openclaw-bundled",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "skill-creator",
+          "description": "Create or update AgentSkills. Use when designing, structuring, or packaging skills with scripts, references, and assets.",
+          "filePath": "/usr/lib/node_modules/openclaw/skills/skill-creator/SKILL.md",
+          "baseDir": "/usr/lib/node_modules/openclaw/skills/skill-creator",
+          "source": "openclaw-bundled",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "weather",
+          "description": "Get current weather and forecasts (no API key required).",
+          "filePath": "/usr/lib/node_modules/openclaw/skills/weather/SKILL.md",
+          "baseDir": "/usr/lib/node_modules/openclaw/skills/weather",
+          "source": "openclaw-bundled",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "dianping-query",
+          "description": "查询大众点评餐厅信息。使用场景：(1) 用户要查询某家餐厅的评分、人均消费、地址 (2) 用户要搜索特定菜系或区域的餐厅推荐 (3) 用户要获取附近美食推荐。登录账号：一定S。重要：搜索时URL需包含城市ID（如hangzhou页面），账号定位北京时需使用URL参数方式绕过。",
+          "filePath": "/root/.openclaw/workspace/skills/dianping-query/SKILL.md",
+          "baseDir": "/root/.openclaw/workspace/skills/dianping-query",
+          "source": "openclaw-workspace",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "wechat-publisher",
+          "description": "一键发布 Markdown 到微信公众号草稿箱。基于 wenyan-cli，支持多主题、代码高亮、图片自动上传。",
+          "filePath": "/root/.openclaw/workspace/skills/wechat-publisher/SKILL.md",
+          "baseDir": "/root/.openclaw/workspace/skills/wechat-publisher",
+          "source": "openclaw-workspace",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "xiaohongshu-publish",
+          "description": "小红书长文发布。用于在网页版小红书创作服务平台发布长文笔记。当用户说\"发小红书\"、\"发小红书长文\"、\"写一篇小红书\"时使用此技能。",
+          "filePath": "/root/.openclaw/workspace/skills/xiaohongshu-publish/SKILL.md",
+          "baseDir": "/root/.openclaw/workspace/skills/xiaohongshu-publish",
+          "source": "openclaw-workspace",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "xiaohongshu-publisher",
+          "description": "Draft and publish posts to 小红书 (Xiaohongshu/RED). Use when creating content for 小红书, drafting posts, generating cover images, or publishing via browser automation. Covers the full workflow from content creation to browser-based publishing, including cover image generation with Pillow.",
+          "filePath": "/root/.openclaw/workspace/skills/xiaohongshu-publisher/SKILL.md",
+          "baseDir": "/root/.openclaw/workspace/skills/xiaohongshu-publisher",
+          "source": "openclaw-workspace",
+          "disableModelInvocation": false
+        }
+      ],
+      "version": 0
+    },
+    "inputTokens": 15178,
+    "outputTokens": 15,
+    "totalTokens": 15178,
+    "modelProvider": "dashscope",
+    "model": "qwen3-max-2026-01-23",
+    "contextTokens": 262144,
+    "systemPromptReport": {
+      "source": "run",
+      "generatedAt": 1771549874616,
+      "sessionId": "d69c20c7-6c5c-40ec-9cd8-c5ddee956ff2",
+      "sessionKey": "agent:main:main",
+      "provider": "dashscope",
+      "model": "qwen3-max-2026-01-23",
+      "workspaceDir": "/root/.openclaw/workspace",
+      "bootstrapMaxChars": 20000,
+      "sandbox": {
+        "mode": "off",
+        "sandboxed": false
+      },
+      "systemPrompt": {
+        "chars": 22154,
+        "projectContextChars": 6616,
+        "nonProjectContextChars": 15538
+      },
+      "injectedWorkspaceFiles": [
+        {
+          "name": "AGENTS.md",
+          "path": "/root/.openclaw/workspace/AGENTS.md",
+          "missing": false,
+          "rawChars": 3663,
+          "injectedChars": 3663,
+          "truncated": false
+        },
+        {
+          "name": "SOUL.md",
+          "path": "/root/.openclaw/workspace/SOUL.md",
+          "missing": false,
+          "rawChars": 685,
+          "injectedChars": 685,
+          "truncated": false
+        },
+        {
+          "name": "TOOLS.md",
+          "path": "/root/.openclaw/workspace/TOOLS.md",
+          "missing": false,
+          "rawChars": 598,
+          "injectedChars": 598,
+          "truncated": false
+        },
+        {
+          "name": "IDENTITY.md",
+          "path": "/root/.openclaw/workspace/IDENTITY.md",
+          "missing": false,
+          "rawChars": 344,
+          "injectedChars": 344,
+          "truncated": false
+        },
+        {
+          "name": "USER.md",
+          "path": "/root/.openclaw/workspace/USER.md",
+          "missing": false,
+          "rawChars": 215,
+          "injectedChars": 215,
+          "truncated": false
+        },
+        {
+          "name": "HEARTBEAT.md",
+          "path": "/root/.openclaw/workspace/HEARTBEAT.md",
+          "missing": false,
+          "rawChars": 89,
+          "injectedChars": 89,
+          "truncated": false
+        },
+        {
+          "name": "BOOTSTRAP.md",
+          "path": "/root/.openclaw/workspace/BOOTSTRAP.md",
+          "missing": false,
+          "rawChars": 698,
+          "injectedChars": 698,
+          "truncated": false
+        }
+      ],
+      "skills": {
+        "promptChars": 4235,
+        "entries": [
+          {
+            "name": "dingtalk-cron-job",
+            "blockChars": 304
+          },
+          {
+            "name": "dingtalk-send-media",
+            "blockChars": 375
+          },
+          {
+            "name": "openclaw-browser-quality",
+            "blockChars": 496
+          },
+          {
+            "name": "clawhub",
+            "blockChars": 423
+          },
+          {
+            "name": "healthcheck",
+            "blockChars": 482
+          },
+          {
+            "name": "skill-creator",
+            "blockChars": 287
+          },
+          {
+            "name": "weather",
+            "blockChars": 211
+          },
+          {
+            "name": "dianping-query",
+            "blockChars": 302
+          },
+          {
+            "name": "wechat-publisher",
+            "blockChars": 224
+          },
+          {
+            "name": "xiaohongshu-publish",
+            "blockChars": 269
+          },
+          {
+            "name": "xiaohongshu-publisher",
+            "blockChars": 463
+          }
+        ]
+      },
+      "tools": {
+        "listChars": 5016,
+        "schemaChars": 15069,
+        "entries": [
+          {
+            "name": "read",
+            "summaryChars": 298,
+            "schemaChars": 392,
+            "propertiesCount": 4
+          },
+          {
+            "name": "edit",
+            "summaryChars": 129,
+            "schemaChars": 591,
+            "propertiesCount": 6
+          },
+          {
+            "name": "write",
+            "summaryChars": 127,
+            "schemaChars": 313,
+            "propertiesCount": 3
+          },
+          {
+            "name": "exec",
+            "summaryChars": 181,
+            "schemaChars": 1037,
+            "propertiesCount": 12
+          },
+          {
+            "name": "process",
+            "summaryChars": 85,
+            "schemaChars": 844,
+            "propertiesCount": 11
+          },
+          {
+            "name": "browser",
+            "summaryChars": 1251,
+            "schemaChars": 1869,
+            "propertiesCount": 28
+          },
+          {
+            "name": "canvas",
+            "summaryChars": 106,
+            "schemaChars": 661,
+            "propertiesCount": 18
+          },
+          {
+            "name": "nodes",
+            "summaryChars": 101,
+            "schemaChars": 1479,
+            "propertiesCount": 33
+          },
+          {
+            "name": "cron",
+            "summaryChars": 2444,
+            "schemaChars": 530,
+            "propertiesCount": 12
+          },
+          {
+            "name": "message",
+            "summaryChars": 89,
+            "schemaChars": 3897,
+            "propertiesCount": 84
+          },
+          {
+            "name": "tts",
+            "summaryChars": 129,
+            "schemaChars": 223,
+            "propertiesCount": 2
+          },
+          {
+            "name": "gateway",
+            "summaryChars": 225,
+            "schemaChars": 465,
+            "propertiesCount": 11
+          },
+          {
+            "name": "agents_list",
+            "summaryChars": 72,
+            "schemaChars": 33,
+            "propertiesCount": 0
+          },
+          {
+            "name": "sessions_list",
+            "summaryChars": 54,
+            "schemaChars": 176,
+            "propertiesCount": 4
+          },
+          {
+            "name": "sessions_history",
+            "summaryChars": 36,
+            "schemaChars": 149,
+            "propertiesCount": 3
+          },
+          {
+            "name": "sessions_send",
+            "summaryChars": 84,
+            "schemaChars": 203,
+            "propertiesCount": 5
+          },
+          {
+            "name": "sessions_spawn",
+            "summaryChars": 107,
+            "schemaChars": 312,
+            "propertiesCount": 8
+          },
+          {
+            "name": "session_status",
+            "summaryChars": 207,
+            "schemaChars": 89,
+            "propertiesCount": 2
+          },
+          {
+            "name": "web_search",
+            "summaryChars": 807,
+            "schemaChars": 572,
+            "propertiesCount": 6
+          },
+          {
+            "name": "aliyun_code_interpreter",
+            "summaryChars": 823,
+            "schemaChars": 137,
+            "propertiesCount": 1
+          },
+          {
+            "name": "aliyun_web_parser",
+            "summaryChars": 871,
+            "schemaChars": 137,
+            "propertiesCount": 1
+          },
+          {
+            "name": "aliyun_wan26_media",
+            "summaryChars": 1382,
+            "schemaChars": 693,
+            "propertiesCount": 6
+          },
+          {
+            "name": "memory_search",
+            "summaryChars": 235,
+            "schemaChars": 139,
+            "propertiesCount": 3
+          },
+          {
+            "name": "memory_get",
+            "summaryChars": 151,
+            "schemaChars": 128,
+            "propertiesCount": 3
+          }
+        ]
+      }
+    }
+  },
+  "agent:main:cron:2fede868-845a-4db1-8691-c47fb53dc9f5": {
+    "sessionId": "324c6aff-9a87-47b4-b285-66af073c7f6c",
+    "updatedAt": 1771408800557,
+    "systemSent": true,
+    "model": "qwen3-max-2026-01-23",
+    "contextTokens": 262144,
+    "skillsSnapshot": {
+      "prompt": "\n\nThe following skills provide specialized instructions for specific tasks.\nUse the read tool to load a skill's file when the task matches its description.\nWhen a skill file references a relative path, resolve it against the skill directory (parent of SKILL.md / dirname of the path) and use that absolute path in tool commands.\n\n<available_skills>\n  <skill>\n    <name>dingtalk-cron-job</name>\n    <description>钉钉渠道专用定时提醒技能。触发场景：用户提到任何时间点提醒、某时间做某事、循环提醒（如&apos;每隔X分钟提醒我&apos;、&apos;下午3点提醒我&apos;、&apos;10分钟后叫我&apos;）时，必须使用 cron job。</description>\n    <location>/usr/lib/node_modules/clawdbot-dingtalk/skills/dingtalk-cron-job/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>dingtalk-send-media</name>\n    <description>Use when chatting via DingTalk and the user asks to “发送/发给我/给我” an image/file/attachment (PDF/Word/Excel/etc), or when needing to output [DING:IMAGE]/[DING:FILE] tags to send local files.</description>\n    <location>/usr/lib/node_modules/clawdbot-dingtalk/skills/dingtalk-send-media/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>openclaw-browser-quality</name>\n    <description>Quality-first OpenClaw browser automation and screenshot capture. Use when a task involves the OpenClaw `browser` tool or CLI browser commands, especially when visual fidelity, clear screenshots, stable refs, or reliable tab control matters (snapshots, screenshots, navigation, actions, debugging).</description>\n    <location>/usr/lib/node_modules/clawdbot-dingtalk/skills/openclaw-browser-quality/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>healthcheck</name>\n    <description>Host security hardening and risk-tolerance configuration for OpenClaw deployments. Use when a user asks for security audits, firewall/SSH/update hardening, risk posture, exposure review, OpenClaw cron scheduling for periodic checks, or version status checks on a machine running OpenClaw (laptop, workstation, Pi, VPS).</description>\n    <location>/usr/lib/node_modules/openclaw/skills/healthcheck/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>skill-creator</name>\n    <description>Create or update AgentSkills. Use when designing, structuring, or packaging skills with scripts, references, and assets.</description>\n    <location>/usr/lib/node_modules/openclaw/skills/skill-creator/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>weather</name>\n    <description>Get current weather and forecasts (no API key required).</description>\n    <location>/usr/lib/node_modules/openclaw/skills/weather/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>dianping-query</name>\n    <description>查询大众点评餐厅信息。使用场景：(1) 用户要查询某家餐厅的评分、人均消费、地址 (2) 用户要搜索特定菜系或区域的餐厅推荐 (3) 用户要获取附近美食推荐。登录账号：一定S。重要：搜索时URL需包含城市ID（如hangzhou页面），账号定位北京时需使用URL参数方式绕过。</description>\n    <location>/root/.openclaw/workspace/skills/dianping-query/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>xiaohongshu-publish</name>\n    <description>小红书长文发布。用于在网页版小红书创作服务平台发布长文笔记。当用户说&quot;发小红书&quot;、&quot;发小红书长文&quot;、&quot;写一篇小红书&quot;时使用此技能。</description>\n    <location>/root/.openclaw/workspace/skills/xiaohongshu-publish/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>xiaohongshu-publisher</name>\n    <description>Draft and publish posts to 小红书 (Xiaohongshu/RED). Use when creating content for 小红书, drafting posts, generating cover images, or publishing via browser automation. Covers the full workflow from content creation to browser-based publishing, including cover image generation with Pillow.</description>\n    <location>/root/.openclaw/workspace/skills/xiaohongshu-publisher/SKILL.md</location>\n  </skill>\n</available_skills>",
+      "skills": [
+        {
+          "name": "dingtalk-cron-job"
+        },
+        {
+          "name": "dingtalk-send-media"
+        },
+        {
+          "name": "openclaw-browser-quality"
+        },
+        {
+          "name": "healthcheck"
+        },
+        {
+          "name": "skill-creator"
+        },
+        {
+          "name": "weather"
+        },
+        {
+          "name": "dianping-query"
+        },
+        {
+          "name": "xiaohongshu-publish"
+        },
+        {
+          "name": "xiaohongshu-publisher"
+        }
+      ],
+      "resolvedSkills": [
+        {
+          "name": "dingtalk-cron-job",
+          "description": "钉钉渠道专用定时提醒技能。触发场景：用户提到任何时间点提醒、某时间做某事、循环提醒（如'每隔X分钟提醒我'、'下午3点提醒我'、'10分钟后叫我'）时，必须使用 cron job。",
+          "filePath": "/usr/lib/node_modules/clawdbot-dingtalk/skills/dingtalk-cron-job/SKILL.md",
+          "baseDir": "/usr/lib/node_modules/clawdbot-dingtalk/skills/dingtalk-cron-job",
+          "source": "openclaw-extra",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "dingtalk-send-media",
+          "description": "Use when chatting via DingTalk and the user asks to “发送/发给我/给我” an image/file/attachment (PDF/Word/Excel/etc), or when needing to output [DING:IMAGE]/[DING:FILE] tags to send local files.",
+          "filePath": "/usr/lib/node_modules/clawdbot-dingtalk/skills/dingtalk-send-media/SKILL.md",
+          "baseDir": "/usr/lib/node_modules/clawdbot-dingtalk/skills/dingtalk-send-media",
+          "source": "openclaw-extra",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "openclaw-browser-quality",
+          "description": "Quality-first OpenClaw browser automation and screenshot capture. Use when a task involves the OpenClaw `browser` tool or CLI browser commands, especially when visual fidelity, clear screenshots, stable refs, or reliable tab control matters (snapshots, screenshots, navigation, actions, debugging).",
+          "filePath": "/usr/lib/node_modules/clawdbot-dingtalk/skills/openclaw-browser-quality/SKILL.md",
+          "baseDir": "/usr/lib/node_modules/clawdbot-dingtalk/skills/openclaw-browser-quality",
+          "source": "openclaw-extra",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "healthcheck",
+          "description": "Host security hardening and risk-tolerance configuration for OpenClaw deployments. Use when a user asks for security audits, firewall/SSH/update hardening, risk posture, exposure review, OpenClaw cron scheduling for periodic checks, or version status checks on a machine running OpenClaw (laptop, workstation, Pi, VPS).",
+          "filePath": "/usr/lib/node_modules/openclaw/skills/healthcheck/SKILL.md",
+          "baseDir": "/usr/lib/node_modules/openclaw/skills/healthcheck",
+          "source": "openclaw-bundled",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "skill-creator",
+          "description": "Create or update AgentSkills. Use when designing, structuring, or packaging skills with scripts, references, and assets.",
+          "filePath": "/usr/lib/node_modules/openclaw/skills/skill-creator/SKILL.md",
+          "baseDir": "/usr/lib/node_modules/openclaw/skills/skill-creator",
+          "source": "openclaw-bundled",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "weather",
+          "description": "Get current weather and forecasts (no API key required).",
+          "filePath": "/usr/lib/node_modules/openclaw/skills/weather/SKILL.md",
+          "baseDir": "/usr/lib/node_modules/openclaw/skills/weather",
+          "source": "openclaw-bundled",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "dianping-query",
+          "description": "查询大众点评餐厅信息。使用场景：(1) 用户要查询某家餐厅的评分、人均消费、地址 (2) 用户要搜索特定菜系或区域的餐厅推荐 (3) 用户要获取附近美食推荐。登录账号：一定S。重要：搜索时URL需包含城市ID（如hangzhou页面），账号定位北京时需使用URL参数方式绕过。",
+          "filePath": "/root/.openclaw/workspace/skills/dianping-query/SKILL.md",
+          "baseDir": "/root/.openclaw/workspace/skills/dianping-query",
+          "source": "openclaw-workspace",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "xiaohongshu-publish",
+          "description": "小红书长文发布。用于在网页版小红书创作服务平台发布长文笔记。当用户说\"发小红书\"、\"发小红书长文\"、\"写一篇小红书\"时使用此技能。",
+          "filePath": "/root/.openclaw/workspace/skills/xiaohongshu-publish/SKILL.md",
+          "baseDir": "/root/.openclaw/workspace/skills/xiaohongshu-publish",
+          "source": "openclaw-workspace",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "xiaohongshu-publisher",
+          "description": "Draft and publish posts to 小红书 (Xiaohongshu/RED). Use when creating content for 小红书, drafting posts, generating cover images, or publishing via browser automation. Covers the full workflow from content creation to browser-based publishing, including cover image generation with Pillow.",
+          "filePath": "/root/.openclaw/workspace/skills/xiaohongshu-publisher/SKILL.md",
+          "baseDir": "/root/.openclaw/workspace/skills/xiaohongshu-publisher",
+          "source": "openclaw-workspace",
+          "disableModelInvocation": false
+        }
+      ],
+      "version": 1771398805939
+    },
+    "modelProvider": "dashscope",
+    "inputTokens": 15159,
+    "outputTokens": 8,
+    "totalTokens": 15159
+  },
+  "agent:main:dingtalk:dm:manager8541": {
+    "sessionId": "af98f77c-0fbd-46ff-ac23-c903cf8f0549",
+    "updatedAt": 1771551577563,
+    "systemSent": true,
+    "abortedLastRun": false,
+    "chatType": "direct",
+    "deliveryContext": {
+      "channel": "webchat",
+      "to": "cidVccDgqTxyTVlzXrUck+7RJosWpdf6TK88pbkLhHiaVI=",
+      "accountId": "default"
+    },
+    "lastChannel": "webchat",
+    "lastTo": "cidVccDgqTxyTVlzXrUck+7RJosWpdf6TK88pbkLhHiaVI=",
+    "lastAccountId": "default",
+    "origin": {
+      "label": "之江",
+      "provider": "webchat",
+      "surface": "webchat",
+      "chatType": "direct",
+      "from": "manager8541",
+      "to": "cidVccDgqTxyTVlzXrUck+7RJosWpdf6TK88pbkLhHiaVI=",
+      "accountId": "default"
+    },
+    "sessionFile": "/root/.openclaw/agents/main/sessions/af98f77c-0fbd-46ff-ac23-c903cf8f0549.jsonl",
+    "compactionCount": 0,
+    "skillsSnapshot": {
+      "prompt": "\n\nThe following skills provide specialized instructions for specific tasks.\nUse the read tool to load a skill's file when the task matches its description.\nWhen a skill file references a relative path, resolve it against the skill directory (parent of SKILL.md / dirname of the path) and use that absolute path in tool commands.\n\n<available_skills>\n  <skill>\n    <name>dingtalk-cron-job</name>\n    <description>钉钉渠道专用定时提醒技能。触发场景：用户提到任何时间点提醒、某时间做某事、循环提醒（如&apos;每隔X分钟提醒我&apos;、&apos;下午3点提醒我&apos;、&apos;10分钟后叫我&apos;）时，必须使用 cron job。</description>\n    <location>/usr/lib/node_modules/clawdbot-dingtalk/skills/dingtalk-cron-job/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>dingtalk-send-media</name>\n    <description>Use when chatting via DingTalk and the user asks to “发送/发给我/给我” an image/file/attachment (PDF/Word/Excel/etc), or when needing to output [DING:IMAGE]/[DING:FILE] tags to send local files.</description>\n    <location>/usr/lib/node_modules/clawdbot-dingtalk/skills/dingtalk-send-media/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>openclaw-browser-quality</name>\n    <description>Quality-first OpenClaw browser automation and screenshot capture. Use when a task involves the OpenClaw `browser` tool or CLI browser commands, especially when visual fidelity, clear screenshots, stable refs, or reliable tab control matters (snapshots, screenshots, navigation, actions, debugging).</description>\n    <location>/usr/lib/node_modules/clawdbot-dingtalk/skills/openclaw-browser-quality/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>healthcheck</name>\n    <description>Host security hardening and risk-tolerance configuration for OpenClaw deployments. Use when a user asks for security audits, firewall/SSH/update hardening, risk posture, exposure review, OpenClaw cron scheduling for periodic checks, or version status checks on a machine running OpenClaw (laptop, workstation, Pi, VPS).</description>\n    <location>/usr/lib/node_modules/openclaw/skills/healthcheck/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>skill-creator</name>\n    <description>Create or update AgentSkills. Use when designing, structuring, or packaging skills with scripts, references, and assets.</description>\n    <location>/usr/lib/node_modules/openclaw/skills/skill-creator/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>weather</name>\n    <description>Get current weather and forecasts (no API key required).</description>\n    <location>/usr/lib/node_modules/openclaw/skills/weather/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>dianping-query</name>\n    <description>查询大众点评餐厅信息。使用场景：(1) 用户要查询某家餐厅的评分、人均消费、地址 (2) 用户要搜索特定菜系或区域的餐厅推荐 (3) 用户要获取附近美食推荐。登录账号：一定S。重要：搜索时URL需包含城市ID（如hangzhou页面），账号定位北京时需使用URL参数方式绕过。</description>\n    <location>/root/.openclaw/workspace/skills/dianping-query/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>wechat-publisher</name>\n    <description>一键发布 Markdown 到微信公众号草稿箱。基于 wenyan-cli，支持多主题、代码高亮、图片自动上传。</description>\n    <location>/root/.openclaw/workspace/skills/wechat-publisher/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>xiaohongshu-publish</name>\n    <description>小红书长文发布。用于在网页版小红书创作服务平台发布长文笔记。当用户说&quot;发小红书&quot;、&quot;发小红书长文&quot;、&quot;写一篇小红书&quot;时使用此技能。</description>\n    <location>/root/.openclaw/workspace/skills/xiaohongshu-publish/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>xiaohongshu-publisher</name>\n    <description>Draft and publish posts to 小红书 (Xiaohongshu/RED). Use when creating content for 小红书, drafting posts, generating cover images, or publishing via browser automation. Covers the full workflow from content creation to browser-based publishing, including cover image generation with Pillow.</description>\n    <location>/root/.openclaw/workspace/skills/xiaohongshu-publisher/SKILL.md</location>\n  </skill>\n</available_skills>",
+      "skills": [
+        {
+          "name": "dingtalk-cron-job"
+        },
+        {
+          "name": "dingtalk-send-media"
+        },
+        {
+          "name": "openclaw-browser-quality"
+        },
+        {
+          "name": "healthcheck"
+        },
+        {
+          "name": "skill-creator"
+        },
+        {
+          "name": "weather"
+        },
+        {
+          "name": "dianping-query"
+        },
+        {
+          "name": "wechat-publisher"
+        },
+        {
+          "name": "xiaohongshu-publish"
+        },
+        {
+          "name": "xiaohongshu-publisher"
+        }
+      ],
+      "resolvedSkills": [
+        {
+          "name": "dingtalk-cron-job",
+          "description": "钉钉渠道专用定时提醒技能。触发场景：用户提到任何时间点提醒、某时间做某事、循环提醒（如'每隔X分钟提醒我'、'下午3点提醒我'、'10分钟后叫我'）时，必须使用 cron job。",
+          "filePath": "/usr/lib/node_modules/clawdbot-dingtalk/skills/dingtalk-cron-job/SKILL.md",
+          "baseDir": "/usr/lib/node_modules/clawdbot-dingtalk/skills/dingtalk-cron-job",
+          "source": "openclaw-extra",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "dingtalk-send-media",
+          "description": "Use when chatting via DingTalk and the user asks to “发送/发给我/给我” an image/file/attachment (PDF/Word/Excel/etc), or when needing to output [DING:IMAGE]/[DING:FILE] tags to send local files.",
+          "filePath": "/usr/lib/node_modules/clawdbot-dingtalk/skills/dingtalk-send-media/SKILL.md",
+          "baseDir": "/usr/lib/node_modules/clawdbot-dingtalk/skills/dingtalk-send-media",
+          "source": "openclaw-extra",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "openclaw-browser-quality",
+          "description": "Quality-first OpenClaw browser automation and screenshot capture. Use when a task involves the OpenClaw `browser` tool or CLI browser commands, especially when visual fidelity, clear screenshots, stable refs, or reliable tab control matters (snapshots, screenshots, navigation, actions, debugging).",
+          "filePath": "/usr/lib/node_modules/clawdbot-dingtalk/skills/openclaw-browser-quality/SKILL.md",
+          "baseDir": "/usr/lib/node_modules/clawdbot-dingtalk/skills/openclaw-browser-quality",
+          "source": "openclaw-extra",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "healthcheck",
+          "description": "Host security hardening and risk-tolerance configuration for OpenClaw deployments. Use when a user asks for security audits, firewall/SSH/update hardening, risk posture, exposure review, OpenClaw cron scheduling for periodic checks, or version status checks on a machine running OpenClaw (laptop, workstation, Pi, VPS).",
+          "filePath": "/usr/lib/node_modules/openclaw/skills/healthcheck/SKILL.md",
+          "baseDir": "/usr/lib/node_modules/openclaw/skills/healthcheck",
+          "source": "openclaw-bundled",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "skill-creator",
+          "description": "Create or update AgentSkills. Use when designing, structuring, or packaging skills with scripts, references, and assets.",
+          "filePath": "/usr/lib/node_modules/openclaw/skills/skill-creator/SKILL.md",
+          "baseDir": "/usr/lib/node_modules/openclaw/skills/skill-creator",
+          "source": "openclaw-bundled",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "weather",
+          "description": "Get current weather and forecasts (no API key required).",
+          "filePath": "/usr/lib/node_modules/openclaw/skills/weather/SKILL.md",
+          "baseDir": "/usr/lib/node_modules/openclaw/skills/weather",
+          "source": "openclaw-bundled",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "dianping-query",
+          "description": "查询大众点评餐厅信息。使用场景：(1) 用户要查询某家餐厅的评分、人均消费、地址 (2) 用户要搜索特定菜系或区域的餐厅推荐 (3) 用户要获取附近美食推荐。登录账号：一定S。重要：搜索时URL需包含城市ID（如hangzhou页面），账号定位北京时需使用URL参数方式绕过。",
+          "filePath": "/root/.openclaw/workspace/skills/dianping-query/SKILL.md",
+          "baseDir": "/root/.openclaw/workspace/skills/dianping-query",
+          "source": "openclaw-workspace",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "wechat-publisher",
+          "description": "一键发布 Markdown 到微信公众号草稿箱。基于 wenyan-cli，支持多主题、代码高亮、图片自动上传。",
+          "filePath": "/root/.openclaw/workspace/skills/wechat-publisher/SKILL.md",
+          "baseDir": "/root/.openclaw/workspace/skills/wechat-publisher",
+          "source": "openclaw-workspace",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "xiaohongshu-publish",
+          "description": "小红书长文发布。用于在网页版小红书创作服务平台发布长文笔记。当用户说\"发小红书\"、\"发小红书长文\"、\"写一篇小红书\"时使用此技能。",
+          "filePath": "/root/.openclaw/workspace/skills/xiaohongshu-publish/SKILL.md",
+          "baseDir": "/root/.openclaw/workspace/skills/xiaohongshu-publish",
+          "source": "openclaw-workspace",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "xiaohongshu-publisher",
+          "description": "Draft and publish posts to 小红书 (Xiaohongshu/RED). Use when creating content for 小红书, drafting posts, generating cover images, or publishing via browser automation. Covers the full workflow from content creation to browser-based publishing, including cover image generation with Pillow.",
+          "filePath": "/root/.openclaw/workspace/skills/xiaohongshu-publisher/SKILL.md",
+          "baseDir": "/root/.openclaw/workspace/skills/xiaohongshu-publisher",
+          "source": "openclaw-workspace",
+          "disableModelInvocation": false
+        }
+      ],
+      "version": 0
+    },
+    "inputTokens": 91590,
+    "outputTokens": 259,
+    "totalTokens": 91590,
+    "modelProvider": "dashscope",
+    "model": "qwen3-max-2026-01-23",
+    "contextTokens": 262144,
+    "systemPromptReport": {
+      "source": "run",
+      "generatedAt": 1771551464884,
+      "sessionId": "af98f77c-0fbd-46ff-ac23-c903cf8f0549",
+      "sessionKey": "agent:main:dingtalk:dm:manager8541",
+      "provider": "dashscope",
+      "model": "qwen3-max-2026-01-23",
+      "workspaceDir": "/root/.openclaw/workspace",
+      "bootstrapMaxChars": 20000,
+      "sandbox": {
+        "mode": "off",
+        "sandboxed": false
+      },
+      "systemPrompt": {
+        "chars": 21893,
+        "projectContextChars": 6781,
+        "nonProjectContextChars": 15112
+      },
+      "injectedWorkspaceFiles": [
+        {
+          "name": "AGENTS.md",
+          "path": "/root/.openclaw/workspace/AGENTS.md",
+          "missing": false,
+          "rawChars": 3663,
+          "injectedChars": 3663,
+          "truncated": false
+        },
+        {
+          "name": "SOUL.md",
+          "path": "/root/.openclaw/workspace/SOUL.md",
+          "missing": false,
+          "rawChars": 685,
+          "injectedChars": 685,
+          "truncated": false
+        },
+        {
+          "name": "TOOLS.md",
+          "path": "/root/.openclaw/workspace/TOOLS.md",
+          "missing": false,
+          "rawChars": 598,
+          "injectedChars": 598,
+          "truncated": false
+        },
+        {
+          "name": "IDENTITY.md",
+          "path": "/root/.openclaw/workspace/IDENTITY.md",
+          "missing": false,
+          "rawChars": 344,
+          "injectedChars": 344,
+          "truncated": false
+        },
+        {
+          "name": "USER.md",
+          "path": "/root/.openclaw/workspace/USER.md",
+          "missing": false,
+          "rawChars": 215,
+          "injectedChars": 215,
+          "truncated": false
+        },
+        {
+          "name": "HEARTBEAT.md",
+          "path": "/root/.openclaw/workspace/HEARTBEAT.md",
+          "missing": false,
+          "rawChars": 89,
+          "injectedChars": 89,
+          "truncated": false
+        },
+        {
+          "name": "BOOTSTRAP.md",
+          "path": "/root/.openclaw/workspace/BOOTSTRAP.md",
+          "missing": false,
+          "rawChars": 698,
+          "injectedChars": 698,
+          "truncated": false
+        },
+        {
+          "name": "MEMORY.md",
+          "path": "/root/.openclaw/workspace/MEMORY.md",
+          "missing": false,
+          "rawChars": 151,
+          "injectedChars": 151,
+          "truncated": false
+        }
+      ],
+      "skills": {
+        "promptChars": 3809,
+        "entries": [
+          {
+            "name": "dingtalk-cron-job",
+            "blockChars": 304
+          },
+          {
+            "name": "dingtalk-send-media",
+            "blockChars": 375
+          },
+          {
+            "name": "openclaw-browser-quality",
+            "blockChars": 496
+          },
+          {
+            "name": "healthcheck",
+            "blockChars": 482
+          },
+          {
+            "name": "skill-creator",
+            "blockChars": 287
+          },
+          {
+            "name": "weather",
+            "blockChars": 211
+          },
+          {
+            "name": "dianping-query",
+            "blockChars": 302
+          },
+          {
+            "name": "wechat-publisher",
+            "blockChars": 224
+          },
+          {
+            "name": "xiaohongshu-publish",
+            "blockChars": 269
+          },
+          {
+            "name": "xiaohongshu-publisher",
+            "blockChars": 463
+          }
+        ]
+      },
+      "tools": {
+        "listChars": 5016,
+        "schemaChars": 15069,
+        "entries": [
+          {
+            "name": "read",
+            "summaryChars": 298,
+            "schemaChars": 392,
+            "propertiesCount": 4
+          },
+          {
+            "name": "edit",
+            "summaryChars": 129,
+            "schemaChars": 591,
+            "propertiesCount": 6
+          },
+          {
+            "name": "write",
+            "summaryChars": 127,
+            "schemaChars": 313,
+            "propertiesCount": 3
+          },
+          {
+            "name": "exec",
+            "summaryChars": 181,
+            "schemaChars": 1037,
+            "propertiesCount": 12
+          },
+          {
+            "name": "process",
+            "summaryChars": 85,
+            "schemaChars": 844,
+            "propertiesCount": 11
+          },
+          {
+            "name": "browser",
+            "summaryChars": 1251,
+            "schemaChars": 1869,
+            "propertiesCount": 28
+          },
+          {
+            "name": "canvas",
+            "summaryChars": 106,
+            "schemaChars": 661,
+            "propertiesCount": 18
+          },
+          {
+            "name": "nodes",
+            "summaryChars": 101,
+            "schemaChars": 1479,
+            "propertiesCount": 33
+          },
+          {
+            "name": "cron",
+            "summaryChars": 2444,
+            "schemaChars": 530,
+            "propertiesCount": 12
+          },
+          {
+            "name": "message",
+            "summaryChars": 89,
+            "schemaChars": 3897,
+            "propertiesCount": 84
+          },
+          {
+            "name": "tts",
+            "summaryChars": 129,
+            "schemaChars": 223,
+            "propertiesCount": 2
+          },
+          {
+            "name": "gateway",
+            "summaryChars": 225,
+            "schemaChars": 465,
+            "propertiesCount": 11
+          },
+          {
+            "name": "agents_list",
+            "summaryChars": 72,
+            "schemaChars": 33,
+            "propertiesCount": 0
+          },
+          {
+            "name": "sessions_list",
+            "summaryChars": 54,
+            "schemaChars": 176,
+            "propertiesCount": 4
+          },
+          {
+            "name": "sessions_history",
+            "summaryChars": 36,
+            "schemaChars": 149,
+            "propertiesCount": 3
+          },
+          {
+            "name": "sessions_send",
+            "summaryChars": 84,
+            "schemaChars": 203,
+            "propertiesCount": 5
+          },
+          {
+            "name": "sessions_spawn",
+            "summaryChars": 107,
+            "schemaChars": 312,
+            "propertiesCount": 8
+          },
+          {
+            "name": "session_status",
+            "summaryChars": 207,
+            "schemaChars": 89,
+            "propertiesCount": 2
+          },
+          {
+            "name": "web_search",
+            "summaryChars": 807,
+            "schemaChars": 572,
+            "propertiesCount": 6
+          },
+          {
+            "name": "aliyun_code_interpreter",
+            "summaryChars": 823,
+            "schemaChars": 137,
+            "propertiesCount": 1
+          },
+          {
+            "name": "aliyun_web_parser",
+            "summaryChars": 871,
+            "schemaChars": 137,
+            "propertiesCount": 1
+          },
+          {
+            "name": "aliyun_wan26_media",
+            "summaryChars": 1382,
+            "schemaChars": 693,
+            "propertiesCount": 6
+          },
+          {
+            "name": "memory_search",
+            "summaryChars": 235,
+            "schemaChars": 139,
+            "propertiesCount": 3
+          },
+          {
+            "name": "memory_get",
+            "summaryChars": 151,
+            "schemaChars": 128,
+            "propertiesCount": 3
+          }
+        ]
+      }
+    }
+  }
+}

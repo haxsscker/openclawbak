@@ -1,0 +1,20 @@
+graph LR
+    User((👤 用户)) -->|"① 用户在这里认证"| IDP[🔐 IDP<br>身份提供者]
+    IDP -->|"② 生成 SAML 断言"| SAML[📄 SAML 断言<br>XML 文档]
+    IDP -->|"③ 发送断言"| SP1((SP1))
+    IDP -->|"③ 发送断言"| SP2((SP2))
+    IDP -->|"③ 发送断言"| SP3((SP3))
+    IDP -->|"③ 发送断言"| SP4((SP4))
+
+    SP1 -->|"④ 验证通过<br>允许访问"| User
+    SP2 -->|"④ 验证通过<br>允许访问"| User
+    SP3 -->|"④ 验证通过<br>允许访问"| User
+    SP4 -->|"④ 验证通过<br>允许访问"| User
+
+    style IDP fill:#FFF3E0,stroke:#E65100
+    style SAML fill:#FCE4EC,stroke:#C2185B
+    style SP1 fill:#111,stroke:#333,color:#fff
+    style SP2 fill:#111,stroke:#333,color:#fff
+    style SP3 fill:#111,stroke:#333,color:#fff
+    style SP4 fill:#111,stroke:#333,color:#fff
+    style User fill:#E3F2FD,stroke:#1565C0

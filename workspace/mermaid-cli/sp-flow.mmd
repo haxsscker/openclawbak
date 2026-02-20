@@ -1,0 +1,21 @@
+sequenceDiagram
+    participant U as User
+    participant SP as Service Provider
+    participant IDP as Identity Provider
+
+    U->>SP: 1. Request access to SP resource
+    
+    Note over SP: User not logged in
+
+    SP->>IDP: 2. Redirect user to IDP for authentication
+    IDP->>U: 3. IDP requests user authentication
+    U->>IDP: 4. User submits credentials
+    
+    Note over IDP: 5. Validate credentials
+
+    IDP->>IDP: 6. Generate SAML assertion
+    IDP->>SP: 7. Send SAML assertion to SP
+    
+    Note over SP: 8. Validate SAML assertion
+
+    SP->>U: 9. Session established, user granted access
