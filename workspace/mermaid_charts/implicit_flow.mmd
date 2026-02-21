@@ -1,0 +1,20 @@
+sequenceDiagram
+    autonumber
+    participant User as 用户
+    participant Client as 客户端应用
+    participant AuthServer as 授权服务器
+    participant ResServer as 资源服务器
+    
+    Client->>AuthServer: ① 发起令牌请求<br/>response_type=token
+    AuthServer->>AuthServer: ② 验证客户端
+    AuthServer->>User: ③ 展示登录页面
+    User->>AuthServer: ④ 提交凭据
+    AuthServer->>AuthServer: ⑤ 验证凭据
+    AuthServer->>User: ⑥ 请求授权
+    User->>AuthServer: ⑦ 同意授权
+    AuthServer->>Client: ⑧ 直接返回 Access Token<br/>（重定向到 redirect_uri）
+    
+    Note over Client,AuthServer: 没有第 ⑨⑩⑪ 步<br/>无需授权码换令牌
+    
+    Client->>ResServer: ⑨ 携带令牌请求资源
+    ResServer->>Client: ⑩ 返回资源数据

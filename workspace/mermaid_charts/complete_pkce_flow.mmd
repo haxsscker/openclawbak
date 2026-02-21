@@ -1,0 +1,24 @@
+sequenceDiagram
+    autonumber
+    participant User as 用户
+    participant Client as 客户端应用
+    participant AuthServer as 授权服务器
+    participant ResServer as 资源服务器
+    
+    Note over Client: 生成 code_verifier（随机字符串）<br/>计算 code_challenge = BASE64URL(SHA256(code_verifier))
+    
+    Client->>AuthServer: ① 授权请求<br/>client_id + response_type=code<br/>+ scope + redirect_uri + state<br/>+ code_challenge + code_challenge_method=S256
+    AuthServer->>AuthServer: ② 验证客户端
+    AuthServer->>User: ③ 展示登录页面
+    User->>AuthServer: ④ 提交凭据
+    AuthServer->>AuthServer: ⑤ 验证凭据
+    AuthServer->>User: ⑥ 请求授权
+    User->>AuthServer: ⑦ 同意授权
+    AuthServer->>Client: ⑧ 返回 authorization_code + state<br/>重定向到 redirect_uri
+    Client->>Client: 验证 state 参数
+    Client->>AuthServer: ⑨ 令牌请求<br/>authorization_code + client_id<br/>+ client_secret + code_verifier
+    AuthServer->>AuthServer: ⑩ 验证 client_id、client_secret<br/>验证 authorization_code<br/>验证 SHA256(code_verifier) == code_challenge
+    AuthServer->>Client: ⑪ 返回 Access Token + Refresh Token
+    Client->>ResServer: ⑫ 请求资源<br/>Authorization: Bearer [token]
+    ResServer->>ResServer: ⑬ 验证令牌
+    ResServer->>Client: ⑭ 返回资源数据

@@ -1,0 +1,13 @@
+graph TB
+A["4 种授权流程<br/>（Grant Types）"] --> B["① 授权码模式<br/>Authorization Code"]
+A --> C["② 隐式授权模式<br/>Implicit"]
+A --> D["③ 客户端凭证模式<br/>Client Credentials"]
+A --> E["④ 密码模式<br/>Password"]
+B --> F["Access Token"]
+C --> F
+D --> F
+E --> F
+F --> G["访问受保护资源"]
+style A fill:#E3F2FD,stroke:#1565C0
+style F fill:#C8E6C9,stroke:#2E7D32
+style G fill:#FFF3E0,stroke:#E65100

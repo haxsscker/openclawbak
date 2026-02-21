@@ -1,0 +1,29 @@
+graph TB
+    A["OAuth 安全最佳实践"] --> B["令牌存储"]
+    A --> C["令牌传输"]
+    A --> D["流程选择"]
+    A --> E["令牌管理"]
+    
+    B --> B1["❌ 不要存在 localStorage / sessionStorage"]
+    B --> B2["✅ SPA：仅存在内存中"]
+    B --> B3["✅ 服务端：加密存储在服务端会话中"]
+    B --> B4["✅ 使用 BFF 模式将令牌排除在浏览器之外"]
+    
+    C --> C1["✅ 使用 Authorization: Bearer 头部传递"]
+    C --> C2["❌ 禁止通过 URL 查询参数传递"]
+    C --> C3["✅ 始终使用 HTTPS / TLS"]
+    
+    D --> D1["✅ 所有场景使用授权码模式 + PKCE"]
+    D --> D2["❌ 禁止使用隐式授权模式"]
+    D --> D3["❌ 禁止使用密码模式"]
+    
+    E --> E1["✅ Access Token 有效期：15-30 分钟"]
+    E --> E2["✅ Refresh Token 一次性使用"]
+    E --> E3["✅ redirect_uri 精确匹配"]
+    E --> E4["✅ 使用 state 参数防止 CSRF"]
+    
+    style A fill:#E3F2FD,stroke:#1565C0
+    style B fill:#FFF3E0,stroke:#E65100
+    style C fill:#E8F5E9,stroke:#2E7D32
+    style D fill:#FCE4EC,stroke:#C62828
+    style E fill:#F3E5F5,stroke:#7B1FA2

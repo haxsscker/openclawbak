@@ -1,0 +1,15 @@
+flowchart TD
+    A["获取 Access Token<br/>+ Refresh Token"] --> B["使用 Access Token<br/>访问受保护资源"]
+    B --> C{"Access Token<br/>是否过期？"}
+    C -->|"否"| B
+    C -->|"是"| D["使用 Refresh Token<br/>请求新的 Access Token"]
+    D --> E{"Refresh Token<br/>是否有效？"}
+    E -->|"是"| F["颁发新的 Access Token<br/>+ 新的 Refresh Token"]
+    F --> B
+    E -->|"否（过期或已使用）"| G["用户需要重新登录授权"]
+    G --> A
+    
+    style A fill:#E3F2FD,stroke:#1565C0
+    style B fill:#C8E6C9,stroke:#2E7D32
+    style D fill:#FFF9C4,stroke:#F9A825
+    style G fill:#FFCDD2,stroke:#C62828

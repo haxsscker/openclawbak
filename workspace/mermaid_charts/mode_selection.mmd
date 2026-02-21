@@ -1,0 +1,13 @@
+flowchart TD
+    A["需要获取 OAuth 令牌"] --> B{"是否有用户参与？"}
+    B -->|"否（M2M）"| C["客户端凭证模式<br/>Client Credentials"]
+    B -->|"是"| D{"客户端是否有后端服务器？"}
+    D -->|"是"| E["授权码模式<br/>Authorization Code<br/>（推荐 ⭐）"]
+    D -->|"否（纯前端）"| F{"是否可以使用 PKCE？"}
+    F -->|"是"| G["授权码模式 + PKCE<br/>（推荐 ⭐）"]
+    F -->|"否"| H["隐式授权模式<br/>Implicit<br/>（⚠️ 已废弃）"]
+    
+    style E fill:#C8E6C9,stroke:#2E7D32
+    style G fill:#C8E6C9,stroke:#2E7D32
+    style C fill:#E3F2FD,stroke:#1565C0
+    style H fill:#FFCDD2,stroke:#C62828

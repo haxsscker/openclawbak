@@ -1,0 +1,14 @@
+sequenceDiagram
+    autonumber
+    participant Client as 客户端应用
+    participant AuthServer as 授权服务器
+    
+    Note over Client: 生成随机字符串 code_verifier<br/>计算哈希 code_challenge = BASE64URL(SHA256(code_verifier))
+    
+    Client->>AuthServer: ① 授权请求<br/>携带 code_challenge
+    AuthServer->>Client: ② 返回 authorization_code
+    Client->>AuthServer: ③ 令牌请求<br/>携带 code_verifier
+    
+    Note over AuthServer: 计算 SHA256(code_verifier)<br/>与之前收到的 code_challenge 比对<br/>一致则验证通过
+    
+    AuthServer->>Client: ④ 返回 Access Token

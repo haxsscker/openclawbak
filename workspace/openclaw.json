@@ -1,0 +1,17 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.2.19-2",
+    "lastTouchedAt": "2026-02-21T08:45:00.000Z"
+  },
+  "compaction": {
+    "memoryFlush": {
+      "enabled": true
+    }
+  },
+  "memorySearch": {
+    "experimental": {
+      "sessionMemory": true
+    },
+    "sources": ["memory", "sessions"]
+  }
+}

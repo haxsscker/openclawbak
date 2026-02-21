@@ -1,0 +1,15 @@
+graph TB
+    A["OAuth 2.1 安全增强"] --> B["✅ 强制使用 PKCE<br/>所有授权码流程都必须使用"]
+    A --> C["❌ 废弃隐式授权模式<br/>不再允许 response_type=token"]
+    A --> D["❌ 废弃密码模式<br/>不再允许 grant_type=password"]
+    A --> E["✅ 精确匹配 redirect_uri<br/>禁止通配符，防止开放重定向攻击"]
+    A --> F["✅ 禁止 URL 传递令牌<br/>必须使用 Authorization 请求头"]
+    A --> G["✅ Refresh Token 一次性使用<br/>用过即失效，颁发新的"]
+    
+    style A fill:#E3F2FD,stroke:#1565C0
+    style B fill:#C8E6C9,stroke:#2E7D32
+    style C fill:#FFCDD2,stroke:#C62828
+    style D fill:#FFCDD2,stroke:#C62828
+    style E fill:#C8E6C9,stroke:#2E7D32
+    style F fill:#C8E6C9,stroke:#2E7D32
+    style G fill:#C8E6C9,stroke:#2E7D32
