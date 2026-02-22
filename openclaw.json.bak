@@ -1,12 +1,12 @@
 {
   "meta": {
-    "lastTouchedVersion": "2026.2.3-1",
-    "lastTouchedAt": "2026-02-20T01:10:57.326Z"
+    "lastTouchedVersion": "2026.2.19-2",
+    "lastTouchedAt": "2026-02-21T15:52:37.673Z"
   },
   "wizard": {
-    "lastRunAt": "2026-02-20T01:10:57.299Z",
+    "lastRunAt": "2026-02-20T01:18:11.168Z",
     "lastRunVersion": "2026.2.3-1",
-    "lastRunCommand": "onboard",
+    "lastRunCommand": "configure",
     "lastRunMode": "local"
   },
   "browser": {
@@ -96,16 +96,19 @@
   },
   "commands": {
     "native": "auto",
-    "nativeSkills": "auto"
+    "nativeSkills": "auto",
+    "restart": true
   },
   "channels": {
     "clawdbot-dingtalk": {
       "enabled": true,
       "clientId": "dingacvp3iblcxwzzgbi",
       "clientSecret": "g_w3jW3UtIGXSFklC-3k82bMOVkNZrSYe5Vxtbs-DYMybYpK6DFuVEK93edswKQz",
-      "replyMode": "markdown",
+      "replyMode": "card",
+      "cardTemplateKey": "content",
+      "cardTemplateld": "f01fd504-0d84-4399-9192-76704f85b4f6.schema",
       "aliyunMcp": {
-        "timeoutSeconds": 60,
+        "timeoutSeconds": 120,
         "tools": {
           "webSearch": {
             "enabled": true
@@ -122,6 +125,26 @@
           }
         },
         "apiKey": "sk-6354e30be5da40dba7381558060736ca"
+      },
+      "aiCard": {
+        "fallbackReplyMode": "markdown",
+        "enabled": true,
+        "templateId": "15db2619-3a01-4588-940e-2aa6b59deba5.schema",
+        "textParamKey": "content"
+      },
+      "connection": {
+        "apiBase": "https://api.dingtalk.com",
+        "openPath": "/v1.0/gateway/connections/open"
+      },
+      "conversation": {
+        "rateLimit": {
+          "limitMessage": "Master, 技能发动频率过快，魔力快不够了..."
+        },
+        "requirePrefix": "",
+        "requireMention": true
+      },
+      "streaming": {
+        "streamBlockTextToSession": true
       }
     }
   },
